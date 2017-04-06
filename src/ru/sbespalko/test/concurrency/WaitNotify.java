@@ -4,7 +4,6 @@ public class WaitNotify {
 
 	public static void main(String[] args) {
 		ThreadB b = new ThreadB();
-		b.main = Thread.currentThread();
 		b.start();
 
 		synchronized (b) {
@@ -27,8 +26,8 @@ public class WaitNotify {
 
 class ThreadB extends Thread {
 	int total;
-	static Thread main;
 
+	@Override
 	public void run() {
 		// сихронизируемся по this из-за того, что используем notify()
 		// работает и без синхронизации
