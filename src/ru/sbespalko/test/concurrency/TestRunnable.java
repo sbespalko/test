@@ -112,6 +112,7 @@ public class TestRunnable {
 			TimeUnit.MILLISECONDS.sleep(100);
 		}
 		this.printResults(System.nanoTime() - startTime);
+		System.exit(0);
 	}
 
 	public static void main(String[] args) throws InterruptedException {
